@@ -7,6 +7,9 @@ print("Bienvenido", username)
 print("Esta app hara los calculos para una nivelacion topografica simple.")
 print("Ingrese 1 para una introduccion del tema, 2 para hacer los calculos o 3 para salir.")
 
+
+#CORREGIR EL X = 1 Y 2
+
 while True:
      x = float(input("Ingrese opcion:"))
      if x in range(1,4):
