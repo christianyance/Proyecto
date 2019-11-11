@@ -8,4 +8,4 @@
 
 > Funcionalidad:
 Se señalara que tipo de Nivel Topografico sera nesesario.
-Pedir la cota inicial para poder hallar las demas cotas teniendo como dato la vista atras, vista adelante, y si en caso hubiera una vista intermedia.
+Pedir la cota inicial para poder hallar las demas cotas teniendo como dato la vista atras, vista adelante.
