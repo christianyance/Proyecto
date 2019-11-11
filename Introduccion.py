@@ -44,15 +44,20 @@ elif x == 2:
     for j in range(n):
         alturas.append(c + puntos1[j])
 
-    print(alturas)
+    print("Las alturas son: ", alturas)
 
     # calcular las cotas
-    #cotas = []
+    cotas = []
 
-    #for j in range(n):
-        #cotas.append(alturas - puntos2)
+    for k in range(n):
+        cotas.append(alturas[k] - puntos2[k])
 
-    #print(cotas)
+    print("Las cotas son: ", cotas)
+
+    if cotas != 0:
+        print("El terreno es trabajable")
+    else:
+        print("Por favor, corrija los datos")   
 
 elif x == 3:
     print("Hasta la proxima.")
