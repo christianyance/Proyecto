@@ -20,6 +20,13 @@ elif x == 2:
     n = int(input("Ingrese el numero de puntos visados: "))
     c = int(input("Ingrese cota inicial: "))
 
+    while True:
+        if c == 0:
+            print("ERROR!")
+            c = int(input("Ingrese cota inicial: "))
+        else:
+            break
+
     # solicitar los puntos visados de la vista atras
     puntos1 = []
 
