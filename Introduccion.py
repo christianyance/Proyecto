@@ -15,7 +15,6 @@ while True:
 if x == 2:
     print("Hasta la proxima.")
 
-
 if x == 1:
     print(".")
     print("La nivelación en topografía es un proceso de medición de elevaciones o altitudes de puntos sobre la superficie de la Tierra.")
@@ -51,7 +50,7 @@ if y == 1:
     puntos1 = []
 
     for i in range(n):
-        p1 = int(input("Ingrese vista atras: "))
+        p1 = float(input("Ingrese vista atras: "))
         puntos1.append(p1)
     
     print(puntos1)
@@ -60,29 +59,55 @@ if y == 1:
     puntos2 = []
 
     for i in range(n):
-        p2 = int(input("Ingrese vista adelante: "))
+        p2 = float(input("Ingrese vista adelante: "))
         puntos2.append(p2)
     
     print(puntos2)
 
-    # calcular las alturas del nivel topografico
+    # calcular las alturas y cotas del nivel topografico
     alturas = []
-
-    for j in range(n):
-        alturas.append(c + puntos1[j])
-
-    print("Las alturas son: ", alturas)
-
-    # calcular las cotas
     cotas = []
 
-    for k in range(n):
-        cotas.append(alturas[k] - puntos2[k])
+    if n == 2:
+        h1 = c + puntos1[0]
+        c2 = h1 - puntos2[0]
 
+        h2 = c2 + puntos1[1]
+
+        alturas = [h1, h2]
+        cotas = [c, c2]
+    
+    if n == 3:
+        h1 = c + puntos1[0]
+        c2 = h1 - puntos2[0]
+
+        h2 = c2 + puntos1[1]
+        c3 = h2 - puntos2[1]
+
+        h3 = c3 + puntos1[2]
+
+        altura = [h1, h2, h3]
+        cotas = [c, c2, c3]
+    
+    if n == 4:
+        h1 = c + puntos1[0]
+        c2 = h1 - puntos2[0]
+
+        h2 = c2 + puntos1[1]
+        c3 = h2 - puntos2[1]
+
+        h3 = c3 + puntos1[2]
+        c4 = h3 - puntos2[2]
+
+        h4 = c4 + puntos1[3]
+
+        alturas = [h1, h2, h3, h4]
+        cotas = [c, c2, c3, c4]
+
+    print("Las alturas son: ", alturas)
     print("Las cotas son: ", cotas)
 
     if cotas != 0:
         print("El terreno es trabajable")
     else:
-        print("Por favor, corrija los datos")   
-
+        print("Por favor, corrija los datos")
