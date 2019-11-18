@@ -5,15 +5,17 @@ username = input("Ingrese nombre:")
 print(".")
 print("Bienvenido", username)
 print("Esta app hara los calculos para una nivelacion topografica simple.")
-print("Ingrese 1 para una introduccion del tema, 2 para hacer los calculos o 3 para salir.")
-
-
-#CORREGIR EL X = 1 Y 2
+print("Ingrese 1 para una introduccion del tema o 2 para salir.")
 
 while True:
      x = float(input("Ingrese opcion:"))
-     if x in range(1,4):
+     if x in range(1,3):
          break
+
+if x == 2:
+    print("Hasta la proxima.")
+
+
 if x == 1:
     print(".")
     print("La nivelación en topografía es un proceso de medición de elevaciones o altitudes de puntos sobre la superficie de la Tierra.")
@@ -29,10 +31,12 @@ if x == 1:
 while True:
     y = float(input("Ingrese opcion:"))
     if y in range(1,3):
-        break
-    #Meter aqui todo el calculo denuevo
-    
-if x == 2 or y == 1:
+        break    
+
+if y == 2:
+    print("Hasta la proxima.")  
+
+if y == 1:
     n = int(input("Ingrese el numero de puntos visados: "))
     c = int(input("Ingrese cota inicial: "))
 
@@ -82,5 +86,3 @@ if x == 2 or y == 1:
     else:
         print("Por favor, corrija los datos")   
 
-elif x == 3 or y == 2:
-    print("Hasta la proxima.")
